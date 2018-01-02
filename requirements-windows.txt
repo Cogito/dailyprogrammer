@@ -1,0 +1,4 @@
+# Windows specific requirements, that may break on other platforms
+
+pypiwin32 # required to use pyttsx3 on windows
+-r requirements.txt
