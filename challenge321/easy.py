@@ -1,3 +1,6 @@
+import pyttsx3 as pyttsx
+
+
 def time_to_text(time):
     hour, minute = map(int, time.split(":"))
     meridian = "am" if hour < 12 else "pm"
@@ -8,3 +11,10 @@ def time_to_text(time):
     minute_text += teens[minute % 20 if 0 < minute < 20 else minute % 10] if minute % 10 > 0 else ""
     output = f"It's {hour}{minute_text}{meridian}"
     return output
+
+
+def speak_time(time):
+    text = time_to_text(time)
+    s = pyttsx.init()
+    s.say(text)
+    s.runAndWait()

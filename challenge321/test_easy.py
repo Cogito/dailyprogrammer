@@ -14,5 +14,10 @@ test_data = [
 
 
 @pytest.mark.parametrize("a, expected", test_data)
-def test_time_talking(a, expected):
+def test_time_to_text(a, expected):
     assert time_to_text(a) == expected
+
+
+@pytest.mark.parametrize("a, _", test_data)
+def test_speak_time(a, _):
+    speak_time(a)
