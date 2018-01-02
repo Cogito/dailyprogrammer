@@ -8,6 +8,8 @@ test_data = [
     ("14:01", "It's two oh one pm"),
     ("20:29", "It's eight twenty nine pm"),
     ("21:00", "It's nine pm"),
+    ("07:17", "It's seven seventeen am"),
+    ("13:12", "It's one twelve pm"),
 ]
 
 
